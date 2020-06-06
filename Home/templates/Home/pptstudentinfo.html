@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>show</title>
+     {% load staticfiles %}
+    <link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+        <style>
+body {
+  background-color:#E6E6FA;
+}
+
+</style>
+</head>
+<body>
+<table class="table table-striped table-bordered table-sm">
+    <thead class="thead-dark">
+        <tr>
+            <th>Name</th>
+            <th>Branch</th>
+            <th>Year</th>
+            <th>Mobile no</th>
+            <th>Roll no</th>
+             <th>Email</th>
+            <th>PPT TOPIC</th>
+              <th>PPT DATE</th>
+             <th>PPT TIME</th>
+
+
+        </tr>
+    </thead>
+<tbody>
+   {% for y in p%}
+    <tr>
+        <td>{{y.stname}}</td>
+        <td>{{y.branch}}</td>
+        <td>{{y.year}}</td>
+        <td>{{y.mn}}</td>
+        <td>{{y.rno}}</td>
+        <td>{{y.pemail}}</td>
+        <td>{{y.ppttopic}}</td>
+           <td>{{y.pdate}}</td>
+         <td>{{y.ptime}}</td>
+
+
+    </tr>
+        {% endfor %}
+</tbody>
+
+</table>
+
+</body>
+</html>

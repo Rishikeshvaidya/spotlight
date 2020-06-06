@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PPT RESULT</title>
+     {% load staticfiles %}
+    <link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+        <style>
+body {
+  background-color:#E6E6FA;
+}
+
+  .button {
+  background-color: green;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  width: 15%;
+  height:3%;
+}
+.button1 {background-color: #4CAF50;} /* Green */
+.button2 {background-color: 	#0000FF;} /* Blue */
+.button3 {background-color: #ff0000;} /* Red */
+.button4 {background-color: #e7e7e7; color: black;} /* Gray */
+.button5 {background-color: #555555;} /* Black */
+</style>
+</head>
+<body>
+<br>
+{% for y in w %}
+<p>{{y.stname}} from {{y.branch}}({{y.year}}) {{y.rank}} Rank
+    <a class="button button3" href="/deletewinner/{{y.id}}">delete</a> </p>
+<br>
+{% endfor%}
+
+
+<center><a class="button button2" href="/winner/">ADD WINNER</a> </p></center>
+</body>
+</html>

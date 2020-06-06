@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PPT RESULT</title>
+     {% load staticfiles %}
+    <link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+        <style>
+body {
+  background-color:#E6E6FA;
+}
+select {
+  width: 25%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+h4 {
+        width: 100%;
+        padding: 10px 0;
+        background-color: lightblue;
+      }
+      .button {
+  background-color: green;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  width: 15%;
+  height:3%;
+}
+.button2 {background-color: #008CBA;} /* Blue */
+.button3 {background-color: #000000;} /* Red */
+.button4 {background-color: #e7e7e7; color: black;} /* Gray */
+.button5 {background-color: #A0522D;} /* Black */
+
+</style>
+</head>
+ <body>
+
+<h4><center><b>Winners</b></center></h4>
+<center>
+<table border="1" style="...">
+
+        <tr>
+            <th>NAME</th>
+            <th>BRANCH</th>
+            <th>YEAR</th>
+             <th>TOTAL</th>
+        </tr>
+    <tr>
+    {% for i in j%}
+    </tr>
+        <th>{{i.stname}}</th>
+        <th>{{i.branch}}</th>
+        <th>{{i.year}}</th>
+         <th>{{i.total}}</th>
+
+    {% endfor %}
+     </tr>
+
+</table>
+    <br> <br>
+        <center>  <h4><b>Add winners name to homapage</b></h4></center>
+      <form action="/winnersubmit/" method="post">
+                                     {% csrf_token%}
+
+
+                                                <br>
+                                                        <div class="container">
+                                           <center>NAME :<select name="sname"  required>
+                                       {% for i in j %}
+                                 <option value="{{i.stname}}">{{i.stname}}</option>
+                                   {% endfor %}
+                                          </select></center>
+                                        <center>BRANCH :<select name="sbranch" style="background-color: #e0d6f5"; required>
+                                      <option value="IT">IT</option>
+                     <option value="ELECTRICAL">ELECTRICAL</option>
+                          <option value="MECHANICAL">MECHANICAL</option>
+                         <option value="CIVIL">CIVIL</option>
+                        </select></center>
+                 <center>YEAR :<select name="syear" style="background-color: #e0d6f5"; required>
+                <option value="BE">BE</option>
+                    <option value="TE">TE</option>
+                  <option value="SE">SE</option>
+                <option value="FE">FE</option>
+                    </select></center>
+                                                            <center> RANK :<select name="rank" style="background-color: #e0d6f5"; required>
+                <option value="1st">1st</option>
+                    <option value="2nd">2nd</option>
+                  <option value="3rd">3rd</option>
+                    </select></center>
+                                         <center><button type="submit" class="button" >SUBMIT</button></center>
+                                            </div>
+                                        </form>
+<br>
+            <a class="button button3"  href="/deletee/">DELETE WINNER</a>
+</body>
+</html>

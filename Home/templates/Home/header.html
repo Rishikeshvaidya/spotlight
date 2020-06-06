@@ -1,0 +1,190 @@
+{%  load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load staticfiles %}
+    <link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <title>Homepage</title>
+    <style>
+    h1 {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+    * {
+      box-sizing: border-box;
+    }
+
+   body {
+    margin: 0;
+    }
+
+
+    .header {
+    background-color: #ffffff;
+    padding: 20px;
+    paddding-left=20px;
+    text-align: left;
+     font-style: italic;
+    }
+
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 16px 14px;
+  text-decoration: none;
+  width=100%;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+  width=100%;
+}
+
+/* Style the footer */
+.footer {
+  background-color:	#000000;
+  padding: 10px;
+  text-align: right;
+    color: #f2f2f2;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 22px;
+}
+
+/* Left and right column */
+.column.left {
+  width: 30%;
+  background-color:#E6E6FA;
+
+}
+.column.right{
+  width: 30%;
+  background-color:#E6E6FA;
+color:   black;
+}
+
+/* Middle column */
+.column.middle {
+  width: 40%;
+  	 background-color:	#F5F5F5;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+    <center>
+<div class="header">
+    <left>
+    <img src="{% static 'Home/image/spot.jpg'%}" alt="pandavleni" width="100" height="100">
+    </left<h1><font size="18"><b>SPOTLIGHT</b></font></h1>
+
+
+</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="topnav">
+  <a href="/spot/"><i class="fa fa-fw fa-home"></i>Home</a>
+    <a href="#">Season <i class="fa fa-caret-down"></i></a>
+
+    <a href="#"></i>About us</a>
+    <a href="#"><i class="fa fa-fw fa-envelope"></i>Contact</a>
+    <a href="/loginpage/"><i class="fa fa-fw fa-user"></i>Login/Register</a>
+</div>
+
+<div class="row">
+  <div class="column left">
+    <h4><font color="yellow">PPT WINNER</font></h4>
+											 {% for y in w %}
+												<span><font size="+1"><font color="BLUE"><b>
+
+												<font color="RED">{{y.rank}}. </font>{{y.stname}} from {{y.branch}}({{y.year}})<BR>
+
+   											   </b> </font></font></span>
+												{% endfor%}
+  </div>
+
+  <div class="column middle">
+
+     <h1><font size="4">Photos</font></h1>
+
+      <div class="w3-content w3-section" style="max-width:500px">
+          <img class="mySlides" src="{% static 'Home/image/5.jpg'%}" style="width:65%">
+  <img class="mySlides" src="{% static 'Home/image/4.jpg'%}" style="width:65%">
+            <img class="mySlides" src="{% static 'Home/image/1.jpg'%}"  style="width:65%">
+  <img class="mySlides" src="{% static 'Home/image/2.jpg'%}" style="width:65%">
+
+
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 4000); // Change image every 2 seconds
+}
+</script>
+  </div>
+
+  <div class="column right">
+      <h1><font size="4">Notifications</font></h1>
+      <br>
+       <br>
+      <marquee > <b><i>
+          {% for y in list %}
+    <p>{{y.adminnotice}}</p>
+    {% endfor%}
+      </i></b> </marquee>
+  </div>
+</div>
+<div class="footer">
+
+    <p><I>Copyright @2017 Powered by spotlight</I></p>
+</div>
+
+{% block content %}
+
+{% endblock %}
+
+</center>
+</body>
+</html>

@@ -1,0 +1,414 @@
+{% load static %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>SPOTLIGHT</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Confpro template project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap-4.1.2/bootstrap.min.css' %}">
+<link href="{% static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.3.4/owl.carousel.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.3.4/owl.theme.default.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.3.4/animate.css' %}">
+<link href="{% static 'plugins/colorbox/colorbox.css' %}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/main_styles.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/responsive.css' %}">
+	    <style>
+    h3{
+  color: red;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+
+img.avatar {
+  width: 6%;
+  border-radius: 10%;
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="super_container" >
+
+	<!-- Header -->
+
+	<header class="header" >
+
+		<div class="header_content d-flex flex-row align-items-center justify-content-start"  >
+
+    <img src="{% static 'Home/image/spot.jpg'%}" alt="Avatar"   class="avatar">
+
+
+
+			<!-- Logo -->
+			<div class="logo">
+				<a href="#">
+
+					<span>SPOT<span>LIGHT</span></span>
+					<span>SPOTLIGHT</span>
+				</a>
+			</div>
+
+			<!-- Main Navigation -->
+			<nav class="main_nav">
+
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+				<ul class="d-flex flex-row align-items-center justify-content-start">
+					<li class="active"><a href="/spot/"><i class="fa fa-fw fa-home"></i>HOME</a></li>
+					<li class="has_children">
+						<a href="#">SEASONS</a>
+						<ul>
+							<li><a href="#">SEASON 1</a></li>
+							<li><a href="#">SEASON 2</a></li>
+							<li><a href="#">SEASON 3</a></li>
+							<li><a href="#">SEASON 4</a></li>
+						</ul>
+					</li>
+					<li >
+						<a href="#">ABOUT US</a>
+					</li>
+					<li><a href="#"><i class="fa fa-fw fa-envelope"></i>CONTACT</a></li>
+					  <li>  <a href="/loginpage/"><i class="fa fa-fw fa-user"></i>Judges</a></li>
+				</ul>
+			</nav>
+
+			<div class="header_right ml-auto d-flex flex-row align-items-center justify-content-start">
+				<div class="log_reg">
+					<ul class="d-flex flex-row align-items-start justify-content-start">
+						<li><a href="/loginpage/">LOGIN</a></li>
+						<li><a href="/register/">REGISTER</a></li>
+					</ul>
+				</div>
+				<div class="social">
+					<ul class="d-flex flex-row align-items-center justify-content-start">
+						<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+				<div class="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></div>
+			</div>
+
+		</div>
+
+	</header>
+
+
+	<div class="menu">
+		<div class="menu_container">
+			<div class="menu_close"><i class="fa fa-times" aria-hidden="true"></i></div>
+			<div class="menu_content d-flex flex-column align-items-center justify-content-start">
+				<nav class="menu_nav">
+					<ul class="d-flex flex-column align-items-center justify-content-start">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About us</a></li>
+						<li><a href="schedule.html">Schedule</a></li>
+						<li><a href="blog.html">News</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="menu_social">
+				<div class="social">
+					<ul class="d-flex flex-row align-items-center justify-content-start">
+						<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Home -->
+
+	<div class="home">
+
+		<!-- Home Slider -->
+		<div class="home_slider_container">
+			<div class="owl-carousel owl-theme home_slider">
+
+				<!-- Slide -->
+				<div class="slide">
+
+					<div class="background_image"><img src="{% static 'Home/image/index.jpg'%}" alt=""></div>
+
+					<div class="home_container">
+
+						<div class="container">
+							<div class="row">
+								<div class="col">
+									<div class="home_content">
+
+
+											<div class="home_title">
+
+
+
+												<font color="white"	><h3>NOTIFICATION:</h3></font>
+
+                                                  {% for y in list %}
+												<span><font size="+1"><font color="white"><b><marquee  direction="up" height="70"  >
+
+												{{y.adminnotice}}
+
+   											   </marquee></b> </font></font></span>
+												{% endfor%}
+
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Home Slider Dots -->
+			<div class="home_slider_dots_container">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div class="home_slider_dots">
+								<ul id="home_slider_custom_dots" >
+									<li class="home_slider_custom_dot "></li>
+									<li class="home_slider_custom_dot"></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- Intro -->
+
+	<div class="intro">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="section_title_container text-center">
+						<div class="section_title"><h1>THE BEST EVENT HAVE EVER SEEN</h1></div>
+					</div>
+					<div class="intro_text text-center">
+						<p> spotlight is the event in which you can enroll yuorself  free for GD and PPT competition for improving your skills</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Tabs Section -->
+
+	<div class="tabs_section">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title_container text-center">
+						<div class="section_subtitle">see what's all about</div>
+						<div class="section_title"><h1>THE EVENTS</h1></div>
+					</div>
+					<div class="tabs_container">
+						<div class="tabs d-flex flex-row align-items-center justify-content-start flex-wrap">
+							<div class="tab active">GD</div>
+							<div class="tab">PPT</div>
+							<div class="tab">WINNER</div>
+						</div>
+						<div class="tab_panels">
+							<div class="tab_panel active">
+								<div class="row">
+									<div class="col-lg-7">
+										<div class="tab_panel_content">
+											<div class="tab_title"><h3>GD</h3></div>
+											<div class="tab_text">
+												<p>Group discussion is an important activity in academic, business and administrative spheres. It is a ... current events, national and international affairs, burning social and economical topics, ... present information in multimedia form and reacts.</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-5 tab_col">
+										<div class="tab_panel_image"><img src="{% static 'Home/image/2.jpg'%}" alt=""></div>
+									</div>
+								</div>
+							</div>
+							<div class="tab_panel">
+								<div class="row">
+									<div class="col-lg-6">
+										<div class="tab_panel_content">
+											<div class="tab_title"><h3>PPT</h3></div>
+											<div class="tab_text">
+												<p>PPT is a file extension for a presentation file format used by Microsoft PowerPoint, the popular presentation software commonly used for office and educational slide shows. ... PPT files can be viewed by PowerPoint, PowerPoint Viewer or the Open Office software suite.</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-6 tab_col">
+										<div class="tab_panel_image"><img src="{% static 'Home/image/1.jpg'%}" alt=""></div>
+									</div>
+								</div>
+							</div>
+							<div class="tab_panel">
+								<div class="row">
+									<div class="col-lg-6">
+										<div class="tab_panel_content">
+											<div class="tab_title"><h3>WINNER</h3></div>
+											<div class="tab_text">
+												<h4><font color="yellow">PPT WINNER</font></h4>
+											 {% for y in w %}
+												<span><font size="+1"><font color="BLUE"><b>
+
+												<font color="RED">{{y.rank}}. </font>{{y.stname}} from {{y.branch}}({{y.year}})<BR>
+
+   											   </b> </font></font></span>
+												{% endfor%}
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-5 tab_col">
+										<div class="tab_panel_image"><img src="{% static 'Home/image/5.jpg'%}" alt=""></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- CTA -->
+
+	<div class="cta">
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/cta.jpg" data-speed="0.8"></div>
+		<div class="cta_overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="cta_content text-center">
+						<div class="cta_title text-center"><h1>IF YOU HAVE IT ,FLAUNT IT !! </h1></div>
+						<div class="cta_text text-center">
+							<p>spotlight is the event in which you can enroll yuorself  free for GD and PPT competition for improving your skills.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+
+	<footer class="footer">
+		<div class="footer_container">
+			<div class="container">
+				<div class="row">
+
+					<!-- Footer About -->
+					<div class="col-lg-4 footer_col">
+
+						<!-- Logo -->
+						<div class="logo">
+							<a href="#">
+								<span>SPOT<span>LIGHT</span></span>
+								<span>SPOTLIGHT</span>
+							</a>
+						</div>
+						<div class="footer_text">
+							<p>spotlight is the event in which you can enroll yuorself  free for GD and PPT competition for improving your skills.</p>
+						</div>
+						<div class="social footer_social">
+							<ul class="d-flex flex-row align-items-center justify-content-start">
+								<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- Newsletter -->
+					<div class="col-lg-4 footer_col">
+						<div class="footer_column">
+							<div class="footer_title"></div>
+
+						</div>
+					</div>
+
+					<!-- Gallery -->
+					<div class="col-lg-4 footer_col">
+						<div class="footer_column">
+							<div class="footer_title">Instagram</div>
+							<div class="gallery d-flex flex-row align-items-start justify-content-between flex-wrap">
+
+								<!-- Gallery Item -->
+								<div class="gallery_item">
+									<a class="colorbox" href="{% static 'Home/image/spot.jpg'%}"><img src="{% static 'Home/image/spot.jpg'%}"  alt=""></a>
+								</div>
+
+								<!-- Gallery Item -->
+								<div class="gallery_item">
+									<a class="colorbox" href="{% static 'Home/image/1.jpg'%}"><img src="{% static 'Home/image/1.jpg'%}" alt=""></a>
+								</div>
+
+								<!-- Gallery Item -->
+								<div class="gallery_item">
+									<a class="colorbox" href="{% static 'Home/image/2.jpg'%}"><img src="{% static 'Home/image/2.jpg'%}" alt=""></a>
+								</div>
+
+								<!-- Gallery Item -->
+								<div class="gallery_item">
+									<a class="colorbox" href="{% static 'Home/image/4.jpg'%}"><img src="{% static 'Home/image/4.jpg'%}" alt=""></a>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="footer_bar">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="footer_bar_content d-flex flex-row align-items-center justify-content-start">
+							<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved |
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+</div>
+
+<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'styles/bootstrap-4.1.2/popper.js' %}"></script>
+<script src="{% static 'styles/bootstrap-4.1.2/bootstrap.min.js' %}"></script>
+<script src="{% static 'plugins/greensock/TweenMax.min.js' %}"></script>
+<script src="{% static 'plugins/greensock/TimelineMax.min.js' %}"></script>
+<script src="{% static 'plugins/scrollmagic/ScrollMagic.min.js' %}"></script>
+<script src="{% static 'plugins/greensock/animation.gsap.min.js' %}"></script>
+<script src="{% static 'plugins/greensock/ScrollToPlugin.min.js' %}"></script>
+<script src="{% static 'plugins/OwlCarousel2-2.3.4/owl.carousel.js' %}"></script>
+<script src="{% static 'plugins/colorbox/jquery.colorbox-min.js' %}"></script>
+<script src="{% static 'plugins/easing/easing.js' %}"></script>
+<script src="{% static 'plugins/progressbar/progressbar.min.js' %}"></script>
+<script src="{% static 'plugins/parallax-js-master/parallax.min.js' %}"></script>
+<script src="{% static 'js/custom.js' %}"></script>
+</body>
+</html>

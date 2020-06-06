@@ -1,0 +1,22 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load staticfiles %}
+    <link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <title>login</title>
+</head>
+<body >
+    {% block content %}
+<div class="container info-boxes pt100 pb100">
+    <p></p>
+ <h3>Registered User List</h3>
+
+{% for y in relist %}
+    <p>{{y.stname}}</p>
+{% endfor%}
+
+</div>
+{% endblock %}
+</body>
+</html>

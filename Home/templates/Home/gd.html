@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load staticfiles %}
+    <link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>gd</title>
+      <script>
+    function msg()
+    {
+    alert("info submitted successfully !!")
+    }
+</script>
+    <style>
+        body{
+        background-color:#E6E6FA;
+        }
+          marquee {
+        width: 100%;
+        padding: 10px 0;
+        background-color: lightblue;
+      }
+        .button {
+  background-color: green;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  width: 15%;
+  height:1%;
+}
+    </style>
+</head>
+<body>
+ <marquee> <b>GD Topic Will Be  Given to u On The Spot Of Competetion</b></marquee><br>
+  <p align="right" > <a class="button"  href="/loginpage/"> LogOut</a></p>
+{% block content%}
+
+<br>
+<center><font size="5"><b><i>!!!   Welcome  {{rg.stname}}   !!!</i></b></font></center><br>
+<form method="post" action="/gdsubmit/{{rg.id}}"  onsubmit="return msg()">
+    {% csrf_token%}
+    <center>
+    Name     :<input type="text" name="nm" placeholder="{{rg.stname}}" value="{{rg.stname}}" disabled><br><br>
+    Branch   :<input type="text" name="br" placeholder="{{rg.branch}}" value="{{rg.branch}}" disabled><br><br>
+    Year     :<input type="text" name="yr" placeholder="{{rg.year}}" value="{{rg.year}}" disabled><br><br>
+    Email    :<input type="email" name="email" placeholder="{{rg.remail}}" value="{{rg.remail}}" disabled><br><br>
+    Mobile NO:<input type="text" name="mn" placeholder="{{rg.mn}}" value="{{rg.mn}}" disabled><br><br>
+    Roll No  :<input type="text" name="rn" placeholder="{{rg.rno}}" value="{{rg.rno}}" disabled><br><br>
+    </center>
+    <center>
+
+     <b>Select Time</b>:<select name="date">
+    <option value="1 st oct 2019">1 st oct 2019</option>
+    <option value="2 nd oct 2019">2 nd oct 2019</option>
+    <option value="3r d oct 2019">3r d oct 2019</option>
+    </select><br><br>
+
+        <b>Select Time</b>:<select  name="time">
+    <option value="10 am to 11 am">10 am to 12 pm</option>
+    <option value="11 am to 12pm">11 am to 12pm</option>
+    <option value="1 pm to 2 pm">1 pm to 2 pm</option>
+    <option value="2 pm to 3pm">2 pm to 3pm</option>
+    </select><br><br>
+
+   <center><button type="submit" class="button">Submit</button></center><br>
+    </center>
+
+
+</form>
+{% endblock%}
+</body>
+</html>

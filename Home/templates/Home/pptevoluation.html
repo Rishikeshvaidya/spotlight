@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> PPT RESULT</title>
+     {% load staticfiles %}
+    <link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+        <style>
+body {
+  background-color:#E6E6FA;
+}
+
+</style>
+</head>
+<h2>
+
+<h2><center>PPT RESULT</center></h2>
+<table class="table table-striped table-bordered table-sm">
+    <thead class="thead-dark">
+        <tr>
+            <th>Name</th>
+            <th>Branch</th>
+            <th>Year</th>
+             <th>CONCEPT CLEARITY</th>
+            <th>ENGLISH FLUENCY</th>
+            <th>CONFIDENCE</th>
+            <th>REASEARCH ON TOPIC</th>
+             <th>TOTAL</th>
+        </tr>
+    </thead>
+<tbody>
+
+    <tr>
+        <td>{{j.stname}}</td>
+        <td>{{j.branch}}</td>
+        <td>{{j.year}}</td>
+         <td>{{j.cc}}</td>
+        <td>{{j.ef}}</td>
+         <td>{{j.co}}</td>
+         <td>{{j.rt}}</td>
+         <td>{{j.total}}</td>
+    </tr>
+</tbody>
+
+</table>
+
+</body>
+</html>

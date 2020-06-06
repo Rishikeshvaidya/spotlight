@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <title>Admin panel</title>
+    <script>
+    function msg()
+    {
+    alert("notification submitted successfully !!")
+    }
+</script>
+    {% load staticfiles %}
+    <link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static '/style.css'%}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+body {
+  background-color:#E6E6FA;
+}
+.button {
+  background-color: green;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  width: 15%;
+  height:3%;
+}
+.button2 {background-color: #008CBA;} /* Blue */
+.button3 {background-color: #f44336;} /* Red */
+.button4 {background-color: #e7e7e7; color: black;} /* Gray */
+.button5 {background-color:  #7a1f1f;} /* Black */
+
+</style>
+</head>
+
+    <body><br>
+    <p align="right" > <a class="button"  href="/loginpage/"> LogOut</a></p>
+{% block content%}
+<form method="POST" action="/noti/" onsubmit="return msg()">
+{% csrf_token %}
+    <br><br>
+    <center><h3>Enter Notification</h3></center><br>
+    <center><textarea  name="adminnotice" maxlength="100" rows="5" cols="50" style="background-color:#F5F5F5"; required>{{noti.adminnotice}}</textarea></center>  <br>
+        <center><button type="submit" class="btn btn-primary">Submit</button></center><br>
+
+</form>
+    <center><a href="/winner/" class="button button5">Winner</a></center><br>
+    <br>
+    <center><a  href="/editdelete/" class="button button5">Edit/Update Notifications</a></center><br>  <br>
+    <center><a  href="/registerstudentinfo/" class="button button5">registerstudentinfo</a><br><br>  <br>
+<center><a  href="/gdstudentinfo/" class="button button5">gdstudentinfo</a></center><br>  <br><center><a  href="/pptstudentinfo/" class="button  button5">pptstudentinfo</a></center>
+{% endblock %}
+
+</body>
+</html>
